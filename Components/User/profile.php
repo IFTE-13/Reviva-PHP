@@ -22,7 +22,7 @@
                     <div class="max-w-lg px-8 py-4 bg-gray-900 rounded-lg shadow-md">
                     <div class="flex items-center justify-between mb-10">
                         <span class="text-sm  font-semibold text-gray-300"><?php echo $today; ?></span>
-                        <a href="http://localhost/fixit/View/User/settings.php" class="px-3 py-1 text-sm text-gray-300 font-bold transition-colors duration-300 transform border bg-gray-600 rounded cursor-pointer hover:bg-gray-500" tabindex="0" role="button">Edit Profile</a>
+                        <a href="http://localhost/fixit/View/Manager/settings.php" class="px-3 py-1 text-sm text-gray-300 font-bold transition-colors duration-300 transform border bg-gray-600 rounded cursor-pointer hover:bg-gray-500" tabindex="0" role="button">Edit Profile</a>
                     </div>
                         <div class="mt-2 flex flex-col">
                         <p class="text-gray-300 mb-4" tabindex="0" role="link">UserID: <?php echo $_SESSION['id']; ?></p>

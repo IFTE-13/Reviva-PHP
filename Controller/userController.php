@@ -47,7 +47,13 @@
                     header("Location: http://localhost/fixit/View/User/index.php");
                 } elseif ($_SESSION['role'] === 'admin') {
                     header("Location: http://localhost/fixit/View/Admin/user.php");
-                }
+                } elseif ($_SESSION['role'] === 'worker') {
+                    header("Location: http://localhost/fixit/View/Worker/index.php");
+                } elseif ($_SESSION['role'] === 'rider') {
+                    header("Location: http://localhost/fixit/View/Rider/index.php");
+                } elseif ($_SESSION['role'] === 'manager') {
+                    header("Location: http://localhost/fixit/View/Manager/index.php");
+                } 
             }
         }
            

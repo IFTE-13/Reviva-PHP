@@ -1,16 +1,13 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Controller/adminController.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Controller/managerController.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<section class="">
-    <div class="flex flex-col">
+<section>
     <?php include("navbar.php"); ?>
-        <div class="flex">
-            <?php include("sidebar.php"); ?>
-            <div class="container  p-8">
+        <div class="container mx-auto p-8">    
             <div class="inline-block min-w-full w-full divide-y align-middle">
                 <div class="overflow-hidden border border-gray-200 md:rounded-lg">
                 <table class="min-w-full divide-y divide-gray-200">
@@ -37,8 +34,6 @@
                 </table>
                 </div>
             </div>
-        </div>
-        </div>
     </div>
 </section>
 </body>
