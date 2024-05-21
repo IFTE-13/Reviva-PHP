@@ -6,17 +6,10 @@
     <title>PCFixr</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
-    <body class="flex flex-col h-screen">
-        <div class="flex flex-col flex-1">
-            <?php
-                include("../Components/header.php");
-                include("../Components/loginForm.php");
-            ?>
-        </div>
-        <div>
-            <?php
-                include("../Components/footer.php");
-            ?>
+    <body class="w-full h-screen flex items-center justify-center">
+        <div >
+            <?php include("../Components/Guest/loginForm.php"); ?>
         </div>
     </body>
+</html>
 </html>

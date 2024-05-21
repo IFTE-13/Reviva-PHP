@@ -8,9 +8,9 @@
 </head>
     <body>
         <?php
-            include("../Components/header.php");
-            include("../Components/services.php");
-            include("../Components/footer.php");
+            include("../Components/Guest/header.php");
+            include("../Components/Guest/services.php");
+            include("../Components/Guest/footer.php");
         ?>
     </body>
 </html>

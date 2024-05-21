@@ -7,13 +7,13 @@
 </head>
     <body>
         <?php
-            include("../Components/header.php");
-            include("../Components/hero.php");
-            include("../Components/stat.php");
-            include("../Components/workFlow.php");
-            include("../Components/perticalServices.php");
-            include("../Components/contact.php");
-            include("../Components/footer.php");
+            include("../Components/Guest/header.php");
+            include("../Components/Guest/hero.php");
+            include("../Components/Guest/stat.php");
+            include("../Components/Guest/workFlow.php");
+            include("../Components/Guest/perticalServices.php");
+            include("../Components/Guest/contact.php");
+            include("../Components/Guest/footer.php");
         ?>
     </body>
 </html>
