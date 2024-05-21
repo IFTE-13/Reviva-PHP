@@ -1050,6 +1050,11 @@ video {
   border-color: rgb(229 231 235 / var(--tw-divide-opacity));
 }
 
+.divide-gray-700 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-divide-opacity));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1119,6 +1124,11 @@ video {
 
 .border-transparent {
   border-color: transparent;
+}
+
+.border-gray-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 
 .bg-blue-600 {

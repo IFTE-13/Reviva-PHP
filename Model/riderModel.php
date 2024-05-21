@@ -16,26 +16,33 @@ class databaseConnection{
         return $connection;
     }
 
-    function showPickUpProduct($connection){
+    function showRequestedService($connection){
         $sqlQuery="SELECT * FROM product where status = 'requested'";
         $result = $connection->query($sqlQuery);
         return $result;
     }
 
-    function confirmPickUpProduct($connection, $productID, $riderID){
-        $sqlQuery="UPDATE product SET status = 'confirmPickUp', riderID = $riderID WHERE id = $productID";
+    function moveToInventory($connection, $productID, $riderID){
+        $sqlQuery="UPDATE product SET status = 'inventory', riderID = $riderID WHERE id = $productID";
         $result = $connection->query($sqlQuery);
         return $result;
     }
 
-    function riderConfirms($connection, $productID){
-        $sqlQuery="UPDATE product SET status = 'picked' WHERE id = $productID";
+
+    function showInventoryProduct($connection){
+        $sqlQuery="SELECT * FROM product where status = 'inventory' and deliveryDate IS NOT NULL";
         $result = $connection->query($sqlQuery);
         return $result;
     }
 
-    function showConfirmPickUpProduct($connection, $riderID){
-        $sqlQuery="SELECT * FROM product where riderID = $riderID";
+    function returnProduct($connection, $productID){
+        $sqlQuery="UPDATE product SET status = 'delivered' WHERE id = $productID";
+        $result = $connection->query($sqlQuery);
+        return $result;
+    }
+
+    function showDeliveredProduct($connection, $riderID){
+        $sqlQuery="SELECT * FROM product where status = 'delivered' and riderID = $riderID";
         $result = $connection->query($sqlQuery);
         return $result;
     }

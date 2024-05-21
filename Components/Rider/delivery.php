@@ -35,15 +35,12 @@
                                                     <th scope="col" class="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-400">Product</th>
                                                     <th scope="col" class="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-400">Pick Up</th>
                                                     <th scope="col" class="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-400">Weight</th>
-                                                    <th scope="col" class="relative py-3.5 px-4">
-                                                        <span class="sr-only">Edit</span>
-                                                    </th>
                                                 </tr>
                                             </thead>
                                             <tbody class="divide-y divide-gray-700 bg-gray-900">
                                                 <?php
-                                                if ($requestedService && $requestedService->num_rows > 0) {
-                                                    while($myrow = $requestedService->fetch_assoc()) {
+                                                if ($delivery && $delivery->num_rows > 0) {
+                                                    while($myrow = $delivery->fetch_assoc()) {
                                                         $weightClass = getWeightClass($myrow['weight']);
                                                         echo '<tr>
                                                         <td class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
@@ -62,15 +59,6 @@
                                                             <div class="inline-flex items-center py-1 rounded-full gap-x-2">
                                                                 <h2 class="text-sm font-normal capitalize ' . $weightClass . '">' . $myrow['weight'] . '</h2>
                                                             </div>
-                                                        </td>
-                                                        <td class="px-4 py-4 text-sm whitespace-nowrap">
-                                                            <form method="POST">
-                                                                <div class="flex items-center gap-x-6">
-                                                                    <button type="submit" name="confirmPickUp" value=' . $myrow['id'] . ' class="transition-colors duration-200 text-gray-300 hover:text-red-500 focus:outline-none">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-check"><path d="m16 16 2 2 4-4"/><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"/><path d="m7.5 4.27 9 5.15"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/></svg>
-                                                                    </button>
-                                                                </div>
-                                                            </form>
                                                         </td>
                                                     </tr>';
                                                     }

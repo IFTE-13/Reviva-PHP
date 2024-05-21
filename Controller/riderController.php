@@ -6,29 +6,45 @@
     $connection = new databaseConnection();
     $connectionObject = $connection->openConnection();
 
-    $pickUp = "";
-    $pickUpData = $connection->showPickUpProduct($connectionObject);
+    $requestedService = "";
+    $requestedServiceData = $connection->showRequestedService($connectionObject);
     
-    if($pickUpData->num_rows > 0){
-        $pickUp = $pickUpData;      
+    if($requestedServiceData->num_rows > 0){
+        $requestedService = $requestedServiceData;      
     }
 
-    if(isset($_REQUEST["confirmDelivery"])){
-        $confirmDeliveryId = intval($_REQUEST["confirmDelivery"]);
-        $confirmDelivery = $connection->confirmPickUpProduct($connectionObject, $confirmDeliveryId, $_SESSION['id']);
+    
+    if(isset($_REQUEST["confirmPickUp"])){
+        $confirmDeliveryId = intval($_REQUEST["confirmPickUp"]);
+        $confirmDelivery = $connection->moveToInventory($connectionObject, $confirmDeliveryId, $_SESSION['id']);
+        if($confirmDelivery === TRUE){
+            header("Refresh:0");
+        }
+            
+    }
+
+    $inventoryProduct = "";
+    $inventoryProductData = $connection->showInventoryProduct($connectionObject, $_SESSION['id']);
+    
+    if($inventoryProductData->num_rows > 0){
+        $inventoryProduct = $inventoryProductData;      
+    }
+
+    if(isset($_REQUEST["returnProduct"])){
+        $confirmDeliveryId = intval($_REQUEST["returnProduct"]);
+        $confirmDelivery = $connection->returnProduct($connectionObject, $confirmDeliveryId);
         if($confirmDelivery === TRUE){
             header("Refresh:0");
         }
            
     }
 
-    $confirmPickUp = "";
-    $confirmPickUpData = $connection->showConfirmPickUpProduct($connectionObject, $_SESSION['id']);
+    $delivery = "";
+    $deliveryData = $connection->showDeliveredProduct($connectionObject, $_SESSION['id']);
     
-    if($confirmPickUpData->num_rows > 0){
-        $confirmPickUp = $confirmPickUpData;      
-    }
-    
+    if($deliveryData->num_rows > 0){
+        $delivery = $deliveryData;      
+    }    
 
     $connection->closeConnection($connectionObject);
 
