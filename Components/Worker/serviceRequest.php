@@ -61,7 +61,7 @@
                             echo '<td class="px-4 py-4 text-sm text-gray-700 whitespace-nowrap description">' . $myrow['description'] . '</td>';
                             echo '<td class="px-4 py-4 text-sm text-gray-700 whitespace-nowrap serviceID">' . $myrow['serviceID'] . '</td>';
                             echo '<td class="px-4 py-4 text-sm text-gray-700 whitespace-nowrap deliveryDate">' . $myrow['deliveryDate'] . '</td>';
-                            echo '<td class="px-4 py-4 text-sm text-gray-700 whitespace-nowrap">
+                            echo '<td class="px-4 py-4 text-sm text-gray-700 whitespace-nowrap hover:text-blue-500">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-2 cursor-pointer" onclick="openModal(this.parentElement.parentElement)">
                                         <path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/>
                                     </svg>
@@ -96,7 +96,7 @@
                                 <input id="modalDeliveryDate" name="deliveryDate" type="date" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
                             </div>
                             <div>
-                                <button type="submit" name="updateDeliveryDate" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-auto sm:text-sm">Update</button>
+                                <button type="submit" name="updateDeliveryDate" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-800 text-base font-medium text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-auto sm:text-sm">Update</button>
                                 <button type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:mt-0 sm:w-auto sm:text-sm" onclick="closeModal()">Cancel</button>
                             </div>
                         </form>

@@ -10,7 +10,6 @@
         <?php
             include("../Components/Guest/header.php");
             include("../Components/Guest/services.php");
-            include("../Components/Guest/footer.php");
         ?>
     </body>
 </html>

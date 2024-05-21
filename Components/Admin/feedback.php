@@ -10,9 +10,7 @@
 <body>
     <div class="flex flex-col">
     <?php include("navbar.php"); ?>
-        <div class="flex">
-            <?php include("sidebar.php"); ?>
-            <div class="container">
+            <div class="container mx-auto">
                 <?php
                   while($myrow = $feedbacks->fetch_assoc())
                   {
@@ -30,7 +28,6 @@
                     }
                   ?>
             </div>
-        </div>
     </div>
 </body>
 </html>

@@ -16,9 +16,7 @@
 <section class="">
     <div class="flex flex-col">
     <?php include("navbar.php"); ?>
-        <div class="flex">
-            <?php include("sidebar.php"); ?>
-            <div class="container  p-8">    
+            <div class="container mx-auto p-8">    
             <button onclick="toggleModal()" class="mb-4 bg-gray-800 px-2 py-1 text-gray-300 rounded-lg text-sm">
                   New
             </button>
@@ -101,7 +99,6 @@
                 </tbody>
                 </table>
                 </div>
-            </div>
         </div>
         </div>
     </div>

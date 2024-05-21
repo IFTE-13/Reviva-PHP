@@ -13,9 +13,7 @@
 <section class="">
     <div class="flex flex-col">
     <?php include("navbar.php"); ?>
-        <div class="flex">
-            <?php include("sidebar.php"); ?>
-            <div class="container">
+            <div class="container mx-auto">
             <div class="inline-block min-w-full w-full divide-y align-middle p-8">
                 <div class="overflow-hidden border border-gray-200 md:rounded-lg">
                 <table class="min-w-full divide-y divide-gray-200">
@@ -45,7 +43,6 @@
                 </tbody>
                 </table>
                 </div>
-            </div>
             </div>
         </div>
     </div>
