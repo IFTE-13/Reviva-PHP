@@ -16,6 +16,7 @@
       <a href="http://localhost/fixit/View/services.php" class="mr-5 hover:text-gray-900">Services</a>
     </nav>
     <div class="pb-1 pt-1 text-center">
+    <a href="http://localhost/fixit/View/login.php">
         <button
           class="inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-dark-3 transition duration-150 ease-in-out hover:shadow-dark-2 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:shadow-dark-2"
           type="button"
@@ -24,8 +25,8 @@
           style="
             background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
           ">
-          <a href="http://localhost/fixit/View/login.php">Login</a>
-        </button>
+          Login
+        </button></a>
       </div>
   </div>
 </header>
