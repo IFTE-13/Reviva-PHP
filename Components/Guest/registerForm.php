@@ -1,5 +1,5 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Controller/User/registration.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Controller/registration.php");
 ?>
 
 <!DOCTYPE html>
