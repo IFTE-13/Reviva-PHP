@@ -1,5 +1,13 @@
 <?php
     include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Controller/adminController.php");
+
+    if (empty($_SESSION['role'])) {
+        header("Location: http://localhost/fixit/View/login.php");
+        exit();
+    } elseif ($_SESSION['role'] !== 'admin') {
+        header("Location: http://localhost/fixit/View/notfound.php");
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>

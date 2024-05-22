@@ -1,5 +1,13 @@
 <?php
     include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Controller/adminController.php");
+
+    if (empty($_SESSION['role'])) {
+        header("Location: http://localhost/fixit/View/login.php");
+        exit();
+    } elseif ($_SESSION['role'] !== 'admin') {
+        header("Location: http://localhost/fixit/View/notfound.php");
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -32,24 +40,24 @@
                                 <form method="POST">
                     <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                         <div>
-                            <label class="text-gray-300">Name</label>
+                            <label class="text-gray-700">Name</label>
                             <input name="name" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
                         </div>
                         <div>
-                            <label class="text-gray-300">Username</label>
+                            <label class="text-gray-700">Username</label>
                             <input name="username" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
                         </div>
                         <div>
-                            <label class="text-gray-300" for="emailAddress">Email Address</label>
+                            <label class="text-gray-700" for="emailAddress">Email Address</label>
                             <input name="email" type="email" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
                         </div>
                         <div>
-                            <label class="text-gray-300" for="emailAddress">Address</label>
+                            <label class="text-gray-700" for="emailAddress">Address</label>
                             <input name="address" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" value='<?php echo $_SESSION['address']; ?>' >
                         </div>
     
                         <div>
-                            <label class="text-gray-300" for="emailAddress">Phone</label>
+                            <label class="text-gray-700" for="emailAddress">Phone</label>
                             <input name="phone" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" value='<?php echo $_SESSION['phone']; ?>'>
                         </div>
                     </div>

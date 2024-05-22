@@ -34,6 +34,12 @@ class databaseConnection{
         return $result;
     }
 
+    function showAllRequestedService($connection, $username){
+        $sqlQuery="SELECT * FROM product where username = '$username'";
+        $result = $connection->query($sqlQuery);
+        return $result;
+    }
+
     function showAllService($connection){
         $sqlQuery="SELECT * FROM service";
         $result = $connection->query($sqlQuery);
@@ -52,8 +58,20 @@ class databaseConnection{
         return $result;
     }
 
-    function requestService($connection, $username, $name, $description, $serviceID, $pickUp, $weight, $deliveryCharge){
-        $sqlQuery = "INSERT INTO product (username, name, description, serviceID, pickupDate, weight, deliveryCharge) VALUES ('$username', '$name', '$description', '$serviceID', '$pickUp', '$weight', '$deliveryCharge')";
+    function requestService($connection, $username, $name, $description, $serviceID, $pickUp, $weight, $deliveryCharge, $total){
+        $sqlQuery = "INSERT INTO product (username, name, description, serviceID, pickupDate, weight, deliveryCharge, total, status) VALUES ('$username', '$name', '$description', '$serviceID', '$pickUp', '$weight', '$deliveryCharge', '$total', 'requested')";
+        $result = $connection->query($sqlQuery);
+        return $result;
+    }
+
+    function showUserTransaction($connection, $id){
+        $sqlQuery = "SELECT * FROM transaction where userID = $id";
+        $result = $connection->query($sqlQuery);
+        return $result;
+    }
+
+    function addTransaction($connection, $date, $amount, $userID){
+        $sqlQuery = "INSERT INTO transaction (date, amount, userID) VALUES ('$date', '$amount', $userID)";
         $result = $connection->query($sqlQuery);
         return $result;
     }

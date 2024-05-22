@@ -1,124 +1,132 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Model/userModel.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/fixit/Model/userModel.php");
 
     session_start();
 
-    $connection= new databaseConnection();
-    $connectionObject=$connection->openConnection();
+    $connection = new databaseConnection();
+    $connectionObject = $connection->openConnection();
 
     $updateInformation = '';
     $serviceRequest = '';
 
-    if(isset($_POST["userLogin"])){
-        
-
-        if(empty($_REQUEST["username"])) {
-        //$loginError = 'Fill up email';
-
-        } elseif (empty($_REQUEST["password"])) {
-
+    if (isset($_POST["userLogin"])) {
+        if (empty($_POST["username"])) {
+            //$loginError = 'Fill up email';
+        } elseif (empty($_POST["password"])) {
             //$loginError = 'Please input your password';
-
         } else {
-            $result=$connection->userLogin($connectionObject, $_REQUEST["username"], $_REQUEST["password"]);
-            if($result->num_rows > 0){
-                $userData=$connection->showUserByUsername($connectionObject, $_REQUEST["username"]);
-                if($userData->num_rows > 0){
-                    while($myrow = $userData->fetch_assoc())
-                        {   
-                            $_SESSION['id'] = $myrow['id'];
-                            $_SESSION['username'] = $myrow['username'];
-                            $_SESSION['name'] = $myrow['name'];
-                            $_SESSION['email'] = $myrow['email'];
-                            $_SESSION['role'] = $myrow['role'];
-                            if($myrow['phone'] === NULL){
-                                $_SESSION['phone'] = "";
-                            } else {
-                                $_SESSION['phone'] = $myrow['phone'];
-                            }
-                            if($myrow['address'] === NULL){
-                                $_SESSION['address'] = "";
-                            } else {
-                                $_SESSION['address'] = $myrow['address'];
-                            }
-                        }
+            $result = $connection->userLogin($connectionObject, $_POST["username"], $_POST["password"]);
+            if ($result->num_rows > 0) {
+                $userData = $connection->showUserByUsername($connectionObject, $_POST["username"]);
+                if ($userData->num_rows > 0) {
+                    while ($myrow = $userData->fetch_assoc()) {
+                        $_SESSION['id'] = $myrow['id'];
+                        $_SESSION['username'] = $myrow['username'];
+                        $_SESSION['name'] = $myrow['name'];
+                        $_SESSION['email'] = $myrow['email'];
+                        $_SESSION['role'] = $myrow['role'];
+                        $_SESSION['phone'] = $myrow['phone'] ?? "";
+                        $_SESSION['address'] = $myrow['address'] ?? "";
+                    }
                 }
-                if($_SESSION['role'] === 'customer'){
-                    header("Location: http://localhost/fixit/View/User/index.php");
-                } elseif ($_SESSION['role'] === 'admin') {
-                    header("Location: http://localhost/fixit/View/Admin/user.php");
-                } elseif ($_SESSION['role'] === 'worker') {
-                    header("Location: http://localhost/fixit/View/Worker/index.php");
-                } elseif ($_SESSION['role'] === 'rider') {
-                    header("Location: http://localhost/fixit/View/Rider/index.php");
-                } elseif ($_SESSION['role'] === 'manager') {
-                    header("Location: http://localhost/fixit/View/Manager/index.php");
-                } 
+                switch ($_SESSION['role']) {
+                    case 'customer':
+                        header("Location: http://localhost/fixit/View/User/index.php");
+                        break;
+                    case 'admin':
+                        header("Location: http://localhost/fixit/View/Admin/user.php");
+                        break;
+                    case 'worker':
+                        header("Location: http://localhost/fixit/View/Worker/index.php");
+                        break;
+                    case 'rider':
+                        header("Location: http://localhost/fixit/View/Rider/index.php");
+                        break;
+                    case 'manager':
+                        header("Location: http://localhost/fixit/View/Manager/index.php");
+                        break;
+                    default:
+                        // handle unexpected role
+                        break;
+                }
+                exit();
             }
         }
-           
     }
 
-    if(isset($_POST["updateUserInformation"])){
-        $userPhoneNo = '';
-        $userAddress = '';
+    if (isset($_POST["updateUserInformation"])) {
+        $userPhoneNo = $_POST["phone"] ?? '';
+        $userAddress = $_POST["address"] ?? '';
 
-        if(empty($_REQUEST["phone"])) {
-            $userPhoneNo = '';
-        } 
-
-        if (empty($_REQUEST["address"])) {
-            $userAddress = '';
-        } 
-
-        $userPhoneNo = $_REQUEST["phone"];
-        $userAddress = $_REQUEST["address"];
-
-        $updateUserInfromation=$connection->updateUserInformation($connectionObject, $_SESSION["username"], $_REQUEST["name"], $_REQUEST["email"], $userPhoneNo, $userAddress);
-        if($updateUserInfromation === TRUE){
-            $_SESSION['name'] = $_REQUEST['name'];
-            $_SESSION['email'] = $_REQUEST['email'];
-            $_SESSION['phone'] = $userPhoneNo;
-            $_SESSION['address'] = $userAddress;
-            $updateInformation = "Information Updated";
-
+        if (isset($_SESSION["username"])) {
+            $updateUserInformation = $connection->updateUserInformation($connectionObject, $_SESSION["username"], $_POST["name"], $_POST["email"], $userPhoneNo, $userAddress);
+            if ($updateUserInformation === TRUE) {
+                $_SESSION['name'] = $_POST['name'];
+                $_SESSION['email'] = $_POST['email'];
+                $_SESSION['phone'] = $userPhoneNo;
+                $_SESSION['address'] = $userAddress;
+                $updateInformation = "Information Updated";
+            }
+        } else {
+            // handle the case where session username is not set
         }
-           
     }
 
-    if(isset($_POST["updateUserPassword"])){
-
-        if(empty($_REQUEST["password"]) | empty($_REQUEST["confirmPassword"])) {
+    if (isset($_POST["updateUserPassword"])) {
+        if (empty($_POST["password"]) || empty($_POST["confirmPassword"])) {
             $updatePasswordError = 'Provide the same password in both fields';
         } else {
-            $updateUserPassword=$connection->updateUserPassword($connectionObject, $_SESSION["username"], $_REQUEST["password"]);
-            if($updateUserPassword === TRUE){
-                echo '<script>alert("Password Updated")</script>';
+            if (isset($_SESSION["username"])) {
+                $updateUserPassword = $connection->updateUserPassword($connectionObject, $_SESSION["username"], $_POST["password"]);
+                if ($updateUserPassword === TRUE) {
+                    echo '<script>alert("Password Updated")</script>';
+                }
+            } else {
+                // handle the case where session username is not set
             }
         }
     }
 
-    if(isset($_POST["requestService"])){
-
-        if(empty($_REQUEST["name"]) | empty($_REQUEST["description"]) | empty($_REQUEST["serviceID"]) | empty($_REQUEST["pickUp"]) | empty($_REQUEST["weight"]) | empty($_REQUEST["deliveryCharge"])) {
+    if (isset($_POST["requestService"])) {
+        $today = date("Y-m-d");
+        if (empty($_POST["name"]) || empty($_POST["description"]) || empty($_POST["serviceID"]) || empty($_POST["pickUp"]) || empty($_POST["weight"]) || empty($_POST["deliveryCharge"])) {
             $serviceRequest = 'Provide all the information';
         } else {
-            $requestService=$connection->requestService($connectionObject, $_SESSION["username"], $_REQUEST["name"], $_REQUEST["description"], $_REQUEST["serviceID"], $_REQUEST["pickUp"], $_REQUEST["weight"], $_REQUEST["deliveryCharge"]) ;
-            if($requestService === TRUE){
-                echo '<script>alert("Request Submitted")</script>';
+            if (isset($_SESSION["username"])) {
+                $requestService = $connection->requestService($connectionObject, $_SESSION["username"], $_POST["name"], $_POST["description"], $_POST["serviceID"], $_POST["pickUp"], $_POST["weight"], $_POST["deliveryCharge"], $_POST["total"]);
+                $addTransaction = $connection->addTransaction($connectionObject, $today, $_POST["total"], $_SESSION["id"]);
+                if ($requestService === TRUE && $addTransaction === TRUE) {
+                    echo '<script>alert("Request Submitted")</script>';
+                }
+            } else {
+                // handle the case where session username is not set
             }
         }
     }
-    
+
     $service = "";
     $serviceData = $connection->showAllService($connectionObject);
-    
-    if($serviceData->num_rows > 0){
-        $service = $serviceData;      
+    if ($serviceData->num_rows > 0) {
+        $service = $serviceData;
     }
+
     
+    $requestedService = "";
+    $transaction = "";
+    if (isset($_SESSION['username'])) {
+
+        $requestedServiceData = $connection->showAllRequestedService($connectionObject, $_SESSION['username']);
+        if ($requestedServiceData->num_rows > 0) {
+            $requestedService = $requestedServiceData;
+        }
+
+        $transactionData = $connection->showUserTransaction($connectionObject, $_SESSION['id']);
+        if ($transactionData->num_rows > 0) {
+            $transaction = $transactionData;
+        }
+    }
+
     $connection->closeConnection($connectionObject);
-    
 ?>
 
    

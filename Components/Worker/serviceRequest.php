@@ -53,6 +53,7 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                         <?php
+                        if ($serviceRequest && $serviceRequest->num_rows > 0) {
                         while($myrow = $serviceRequest->fetch_assoc()){
                             echo '<tr>';
                             echo '<td class="px-4 py-4 text-sm text-gray-700 whitespace-nowrap requestID">' . $myrow['id'] . '</td>';
@@ -67,7 +68,13 @@
                                     </svg>
                                   </td>'; 
                             echo '</tr>'; 
-                        }  
+                        }  }else {
+                            echo '<tr>
+                                <td colspan="6" class="px-4 py-4 text-sm font-medium text-center text-gray-700 whitespace-nowrap">
+                                    <h2 class="font-medium text-white">No records found</h2>
+                                </td>
+                            </tr>';
+                        }
                         ?>
                     </tbody>
                 </table>

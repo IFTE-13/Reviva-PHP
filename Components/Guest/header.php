@@ -14,6 +14,8 @@
     </a>
     <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
       <a href="http://localhost/fixit/View/services.php" class="mr-5 hover:text-gray-900">Services</a>
+      <a href="http://localhost/fixit/View/faq.php" class="mr-5 hover:text-gray-900">FAQ</a>
+      <a href="http://localhost/fixit/View/register.php" class="mr-5 hover:text-gray-900">Join Us</a>
     </nav>
     <div class="pb-1 pt-1 text-center">
     <a href="http://localhost/fixit/View/login.php">
