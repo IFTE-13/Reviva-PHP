@@ -42,9 +42,6 @@
                     case 'rider':
                         header("Location: http://localhost/fixit/View/Rider/index.php");
                         break;
-                    case 'manager':
-                        header("Location: http://localhost/fixit/View/Manager/index.php");
-                        break;
                     default:
                         // handle unexpected role
                         break;

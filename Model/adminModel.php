@@ -28,12 +28,6 @@ class databaseConnection{
         return $result;
     }
 
-    function showAllManagers($connection){
-        $sqlQuery="SELECT * FROM user WHERE role='manager'";
-        $result = $connection->query($sqlQuery);
-        return $result;
-    }
-
     function showAllWorkers($connection){
         $sqlQuery="SELECT * FROM user WHERE role='worker'";
         $result = $connection->query($sqlQuery);
@@ -67,13 +61,6 @@ class databaseConnection{
     function registerRider($connection, $username, $email, $address, $phone, $name)
     {
         $sqlQuery = "INSERT INTO user (username, name, email, password, role, address, phone) VALUES ('$username', '$name', '$email', '00000000', 'rider', '$address', '$phone')";
-        $result = $connection->query($sqlQuery);
-        return $result;
-    }
-
-    function registerManager($connection, $username, $email, $address, $phone, $name)
-    {
-        $sqlQuery = "INSERT INTO user (username, name, email, password, role, address, phone) VALUES ('$username', '$name', '$email', '00000000', 'manager', '$address', '$phone')";
         $result = $connection->query($sqlQuery);
         return $result;
     }

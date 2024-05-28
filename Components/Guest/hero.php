@@ -13,7 +13,7 @@
       <p class="mb-8 leading-relaxed">Is your computer running slow or displaying error messages? Don't worry! Our team of skilled technicians specializes in diagnosing and fixing a wide range of computer issues. Whether it's a hardware malfunction, software glitch, or virus infection, we've got you covered.</p>
       <div class="flex justify-center">
       <button
-          class="inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-dark-3 transition duration-150 ease-in-out hover:shadow-dark-2 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:shadow-dark-2"
+          class="inline-block w-full rounded-full px-6 pb-2 pt-2.5 text-lg font-medium uppercase leading-normal text-white shadow-dark-3 transition duration-150 ease-in-out hover:shadow-dark-2 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:shadow-dark-2"
           type="button"
           data-twe-ripple-init
           data-twe-ripple-color="light"

@@ -6,7 +6,7 @@
             </a>
         </div>
 
-        <div class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:opacity-100 md:translate-x-0 md:flex md:items-center md:justify-between">
+        <div class="w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:opacity-100 md:translate-x-0 md:flex md:items-center md:justify-between">
             <div class="flex flex-row ml-10 gap-x-3">
                 <a href="http://localhost/fixit/View/Admin/user.php" class="p-1.5 text-gray-300 focus:outline-nones transition-colors duration-200 rounded-lg hover:text-blue-500">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -14,10 +14,6 @@
 
                 <a href="http://localhost/fixit/View/Admin/rider.php" class="p-1.5 text-gray-300 focus:outline-nones transition-colors duration-200 rounded-lg hover:text-blue-500">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bike"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></svg>
-                </a>
-
-                <a href="http://localhost/fixit/View/Admin/manager.php" class="p-1.5 text-gray-300 focus:outline-nones transition-colors duration-200 rounded-lg hover:text-blue-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
                 </a>
 
                 <a href="http://localhost/fixit/View/Admin/worker.php" class="p-1.5 text-gray-300 focus:outline-nones transition-colors duration-200 rounded-lg hover:text-blue-500">
