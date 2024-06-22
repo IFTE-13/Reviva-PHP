@@ -30,7 +30,7 @@
 
             <div class="relative mt-4 md:mt-0">
                 <div class="flex flex-col md:flex-row md:mx-6 items-center gap-x-4">
-                    <a href="http://localhost/fixit/View/Worker/settings.php" class="my-2 text-gray-300 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"><?php echo $_SESSION['name']?></a>
+                    <p class="my-2 text-gray-300 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"><?php echo $_SESSION['name']?></p>
                     <p class="my-2 text-gray-700 dark:text-gray-200"> | </p>
                     <p class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"><?php echo $_SESSION['email']?></p>
                     <p class="my-2 text-gray-700 dark:text-gray-200"> | </p>

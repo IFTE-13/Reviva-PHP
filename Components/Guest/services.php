@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-gray-100">
-    <section class="text-gray-600 body-font">
+    <section class="text-gray-600 body-font py-10">
         <div class="container px-5 mx-auto">
             <h1 class="sm:text-3xl text-2xl font-medium title-font text-start mt-10 text-gray-900 mb-10">Services we
                 <span class="text-orange-600">Provide</span></h1>

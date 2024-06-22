@@ -3,14 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PCFixr | Services</title>
+        <title>PCFixr | About</title>
         <!-- Link to the main stylesheet -->
         <link rel="stylesheet" href="../styles.css">
     </head>
     <body>
         <?php
+            // Include the header component
             include("../Components/Guest/header.php");
-            include("../Components/Guest/services.php");
+
+            // Include the faq component
+            include("../Components/Guest/contacts.php");
             include("../Components/Guest/footer.php");
         ?>
     </body>

@@ -8,25 +8,13 @@
     </head>
     <body>
         <?php
-            // Include the header component
             include("../Components/Guest/header.php");
-
-            // Include the hero section component
             include("../Components/Guest/hero.php");
-
-            // Include the statistics section component
             include("../Components/Guest/stat.php");
-
-            // Include the workflow section component
-            include("../Components/Guest/workFlow.php");
-
-            // Include the services section component
+            include("../Components/Guest/testimonial.php");
             include("../Components/Guest/perticalServices.php");
-
-            // Include the contact section component
-            include("../Components/Guest/contact.php");
-
-            // Include the footer component
+            include("../Components/Guest/newsletter.php");
+            include("../Components/Guest/featureSection.php");
             include("../Components/Guest/footer.php");
         ?>
     </body>

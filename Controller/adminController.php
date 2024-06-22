@@ -20,13 +20,6 @@
         $riders = $rdersData;      
     }
 
-    $managers = "";
-    $managersData = $connection->showAllManagers($connectionObject);
-    
-    if($managersData->num_rows > 0){
-        $managers = $managersData;      
-    }
-
     $workers = "";
     $workersData = $connection->showAllWorkers($connectionObject);
     
@@ -83,7 +76,7 @@
         if(empty($_REQUEST["username"]) | empty($_REQUEST["email"]) | empty($_REQUEST["address"]) | empty($_REQUEST["phone"]) | empty($_REQUEST["name"])) {
             $registrationWorkerError = "Please input all the fields";
         } else {
-            $result = $connection->registerManager($connectionObject, $_REQUEST["username"], $_REQUEST["email"], $_REQUEST["address"],$_REQUEST["phone"], $_REQUEST["name"]);
+            $result = $connection->registerWorker($connectionObject, $_REQUEST["username"], $_REQUEST["email"], $_REQUEST["address"],$_REQUEST["phone"], $_REQUEST["name"]);
             if($result == TRUE){
                 header("Refresh:0");
                 $registrationWorkerError = "";

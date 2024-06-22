@@ -9,8 +9,18 @@
     </head>
     <body>
         <?php
+            // Include the header component
             include("../Components/Guest/header.php");
-            include("../Components/Guest/faq.php");
+
+            // Include the faq component
+            include("../Components/Guest/cta.php");
+            include("../Components/Guest/about.php");
+            include("../Components/Guest/ceo.php");
+            include("../Components/Guest/team.php");
+            include("../Components/Guest/mission.php");
+            include("../Components/Guest/contact.php");
+
+            // Include the footer component
             include("../Components/Guest/footer.php");
         ?>
     </body>
