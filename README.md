@@ -1,94 +1,101 @@
-# ReBoot
+# Reviva - PC Parts Repair Platform
 
-Welcome to the ReBoot repository! This project contains the code for the ReBoot website, which provides services for repairing PC components. This README will guide you through the setup process, usage, and other relevant information.
-
-[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
-## Introduction
-
-ReBoot is a web application designed to offer repair services for various PC components. This repository includes all the necessary code for the frontend and backend of the website.
+## Overview
+Reviva is an innovative web platform designed to provide comprehensive PC parts repair services, addressing the growing need for reliable and accessible technical support in the digital age. The platform streamlines the repair process, integrates advanced diagnostic tools, and promotes user empowerment through educational resources. By prioritizing transparency, customer satisfaction, and sustainability, Reviva aims to revolutionize the PC repair industry.
 
 ## Features
+- **User-Friendly Interface**: Simplifies navigation for users of all technical backgrounds.
+- **Advanced Diagnostics**: Employs machine learning algorithms for accurate and efficient hardware issue identification.
+- **Transparent Pricing**: Clear pricing models to foster customer trust.
+- **Educational Resources**: Troubleshooting guides and maintenance tips to empower users.
+- **Community Forum**: A space for users to share experiences, seek advice, and build a knowledge base.
+- **Logistics Integration**: Seamless pick-up and delivery services for a hassle-free repair process.
+- **Subscription Plans**: Offers premium features like priority support and extended warranties.
+- **Sustainability Focus**: Promotes repair and reuse to reduce electronic waste.
 
-- User-friendly interface for booking repair services
-- Service listings with detailed descriptions
-- User registration and login
-- Admin panel for managing services and users
-- Integration with PHPMyAdmin for database management
-
-## Technologies Used
-
-- **Frontend**: HTML, Tailwind CSS
-- **Backend**: PHP
-- **Database**: PHPMyAdmin (MySQL)
+## Project Structure
+- **Abstract**: Outlines the platform’s purpose and contributions.
+- **Introduction**: Discusses the need for reliable PC repair services and Reviva’s mission.
+- **Related Works**: Reviews existing research and platforms in the PC repair industry.
+- **Proposed System**: Details the platform’s architecture, including hardware/software requirements and user roles.
+- **Design**: Describes the UI/UX design, including registration, profile management, and rider logistics.
+- **Conclusion and Future Work**: Summarizes achievements and outlines plans for enhancements like mobile apps and advanced analytics.
 
 ## Installation
+To set up the Reviva platform locally, follow these steps:
 
-Follow these steps to set up the project locally:
+### Prerequisites
+- **Hardware Requirements**:
+  - Processor: Celeron® Dual-Core CPU @ 1.90 GHz
+  - RAM: At least 350 MB
+  - System Type: 32-bit Operating System
+  - Hard Drive: Minimum 100 GB free disk space
+  - Network: Ethernet or Wi-Fi adapter
 
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/yourusername/ReBoot.git
-    cd ReBoot
-    ```
+- **Software Requirements**:
+  - Visual Studio Code
+  - XAMPP Control Panel
+  - Node.js
 
-2. **Set up the database**:
-    - Import the provided SQL file into your PHPMyAdmin to set up the database schema and tables.
-    - Update the database configuration in the PHP files (e.g., `$_SERVER['DOCUMENT_ROOT'] ."/reboot/Model/adminModel.php`).
+- **Programming Languages and Frameworks**:
+  - HTML
+  - Tailwind CSS
+  - PHP
+  - JavaScript
 
-3. **Install dependencies**:
-    - Make sure you have PHP and a web server (e.g., Apache) installed.
-    - No additional dependencies are required for HTML and Tailwind CSS as they are included via npm.
+### Setup Instructions
+1. **Clone the Repository**:
 
-4. **Run the application**:
-    - Start your web server and navigate to the project directory.
-    - From you terminal run 'npm install'.
-    - Compile the tailwind css with 'npx tailwindcss -i input.css -o styles.css --watch'
-    - Open your browser and go to `http://localhost/ReBoot`.
+   ```bash
+   git clone https://github.com/username/Reviva.git
+   ```
+3. **Install Dependencies**:
+- Ensure Node.js is installed: `npm install`
+- Set up XAMPP for the PHP backend and MySQL database.
 
-> [!Note]
-> You will find the SQL file under the Database branch.
+3. **Configure the Database**:
+- Import the provided SQL schema for tables: `Feedback`, `Product/Service Request`, `Service`, `Transaction`, and `User`.
+- Update database credentials in the configuration file (e.g., `config.php`).
+
+4. **Run the Application**:
+- Start the XAMPP Apache and MySQL servers.
+- Open the project in Visual Studio Code and run it via a local server (e.g., `http://localhost/Reviva`).
 
 ## Usage
+- **Admin**: Manage workers, managers, riders, and service requests.
+- **Customer**: Register, request repairs, track progress, and access educational resources.
+- **Manager**: Oversee operations and monitor service requests.
+- **Worker**: Handle repair tasks and update service statuses.
+- **Rider**: Manage pick-up and delivery logistics through the rider portal.
 
-- **Home Page**: View and book repair services.
-- **User Registration/Login**: Create an account or log in to access additional features.
-- **Admin Panel**: Manage services, users, and view transactions (accessible to admin users only).
+## Database Structure
+The platform uses the following tables:
+- **Feedback**: Stores user feedback.
+- **Product/Service Request**: Tracks repair requests.
+- **Service**: Details available repair services.
+- **Transaction**: Records payment and service transactions.
+- **User**: Manages user profiles and roles (Admin, Customer, Manager, Worker, Rider).
+
+## Diagrams
+- **ER Diagram**: Visualizes relationships between database tables.
+- **Data Flow Chart**: Illustrates the flow of data through the system.
+
+## Future Work
+- **Mobile Application**: Develop a mobile app for on-the-go access.
+- **Advanced Analytics**: Implement predictive maintenance and user behavior analysis.
+- **Remote Assistance**: Add real-time troubleshooting features.
+- **Expanded Services**: Include software troubleshooting and niche market support.
+
+## References
+- [Web Technology for Developers](https://developer.mozilla.org/en-US/docs/Web)
+- [Shadcn/Ui](https://ui.shadcn.com/)
+- [GitHub](https://github.com/)
+- [JavaScript — MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [W3Schools](https://www.w3schools.com/)
+- [Open AI](https://chat.openai.com/)
 
 ## Contributing
-
-We welcome contributions to enhance the project. To contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes and commit them (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Create a Pull Request.
-
-> [!Important]
-> Please ensure your code follows the project's coding standards and include appropriate tests.
-
-> [!Tip]
-> Always backup your database before making changes.
+Contributions are welcome! Please fork the repository, create a new branch, and submit a pull request with your changes. Ensure your code follows the project’s coding standards and includes appropriate documentation.
 
 ## License
-> [!CAUTION]
-> This project is licensed under the MIT License. Feel free to use and modify the code as per the terms of the license.
-
-## Contact
-
-If you have any questions or need further assistance, feel free to contact us:
-
-- **Email**: ifte.phoenix@gmail.com
-- **GitHub Issues**: [Create a new issue](https://github.com/ifte-13/ReBoot/issues)
+This project is licensed under the MIT License. See the `LICENSE` file for details.
