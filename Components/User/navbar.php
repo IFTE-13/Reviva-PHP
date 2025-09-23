@@ -8,19 +8,19 @@
 
         <div class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:opacity-100 md:translate-x-0 md:flex md:items-center md:justify-between">
             <div class="flex flex-col px-2 -mx-4 md:flex-row md:mx-10 md:py-0">
-                <a href="http://localhost/fixit/View/User/index.php" class="px-2.5 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg hover:text-blue-500 hover:bg-gray-700 md:mx-2">Home</a>
-                <a href="http://localhost/fixit/View/User/services.php" class="px-2.5 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg hover:text-blue-500 hover:bg-gray-700 md:mx-2">Services</a>
-                <a href="http://localhost/fixit/View/User/serviceRequest.php" class="px-2.5 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg hover:text-blue-500 hover:bg-gray-700 md:mx-2">Request</a>
-                <a href="http://localhost/fixit/View/User/transaction.php" class="px-2.5 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg hover:text-blue-500 hover:bg-gray-700 md:mx-2">Transaction</a>
+                <a href="http://localhost/PCFixer/View/User/index.php" class="px-2.5 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg hover:text-blue-500 hover:bg-gray-700 md:mx-2">Home</a>
+                <a href="http://localhost/PCFixer/View/User/services.php" class="px-2.5 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg hover:text-blue-500 hover:bg-gray-700 md:mx-2">Services</a>
+                <a href="http://localhost/PCFixer/View/User/serviceRequest.php" class="px-2.5 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg hover:text-blue-500 hover:bg-gray-700 md:mx-2">Request</a>
+                <a href="http://localhost/PCFixer/View/User/transaction.php" class="px-2.5 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg hover:text-blue-500 hover:bg-gray-700 md:mx-2">Transaction</a>
             </div>
 
             <div class="relative mt-4 md:mt-0">
                 <div class="flex flex-col md:flex-row md:mx-6 items-center gap-x-4">
-                    <a href="http://localhost/fixit/View/User/settings.php" class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"><?php echo $_SESSION['name']?></a>
+                    <a href="http://localhost/PCFixer/View/User/settings.php" class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"><?php echo $_SESSION['name']?></a>
                     <p class="my-2 text-gray-700 dark:text-gray-200"> | </p>
                     <p class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"><?php echo $_SESSION['email']?></p>
                     <p class="my-2 text-gray-700 dark:text-gray-200"> | </p>
-                    <a href="http://localhost/fixit/Controller/logoutController.php" class="pt-1 text-red-700">
+                    <a href="http://localhost/PCFixer/Controller/logoutController.php" class="pt-1 text-red-700">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
                     </a>
                 </div>

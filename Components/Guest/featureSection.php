@@ -22,7 +22,7 @@
 
 <section class="py-14">
     <div class="container mx-auto px-4 text-gray-600 md:px-8">
-        <div class="max-w-xl space-y-3">
+        <div class="w-full text-center space-y-3">
             <h3 class="text-orange-600 font-semibold">Features</h3>
             <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">Everything you need to keep your PC running smoothly</p>
             <p>Our comprehensive PC repair services ensure that your computer is running at its best. From hardware repairs to software optimization, we've got you covered.</p>

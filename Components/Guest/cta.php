@@ -15,7 +15,7 @@
         </p>
     </div>
     <div class="mt-4">
-        <a href="http://localhost/fixit/View/login.php" class="inline-block py-2 px-4 text-white font-medium mt-4 bg-orange-600 duration-150 hover:bg-orange-500 active:bg-orange-700 rounded-lg shadow-md hover:shadow-none">
+        <a href="http://localhost/PCFixer/View/login.php" class="inline-block py-2 px-4 text-white font-medium mt-4 bg-orange-600 duration-150 hover:bg-orange-500 active:bg-orange-700 rounded-lg shadow-md hover:shadow-none">
             Get started
         </a>
     </div>

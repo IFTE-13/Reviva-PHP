@@ -1,5 +1,5 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Model/riderModel.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/PCFixer/Model/riderModel.php");
 
     session_start();
 

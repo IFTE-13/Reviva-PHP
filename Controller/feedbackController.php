@@ -1,5 +1,5 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Model/feedbackModel.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/PCFixer/Model/feedbackModel.php");
 
     $connection = new databaseConnection();
     $connectionObject = $connection->openConnection();

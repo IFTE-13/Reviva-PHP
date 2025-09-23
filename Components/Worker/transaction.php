@@ -1,5 +1,5 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Controller/workerController.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/PCFixer/Controller/workerController.php");
 ?>
 
 <!DOCTYPE html>

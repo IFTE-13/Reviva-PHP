@@ -66,7 +66,7 @@
         </div>
       </div>
     </div>
-    <a href="http://localhost/fixit/View/services.php"><button class="flex mx-auto mt-16 text-white bg-orange-600 border-0 py-2 px-8 focus:outline-none hover:bg-orange-500 rounded text-lg">View All</button></a>
+    <a href="http://localhost/PCFixer/View/services.php"><button class="flex mx-auto mt-16 text-white bg-orange-600 border-0 py-2 px-8 focus:outline-none hover:bg-orange-500 rounded text-lg">View All</button></a>
   </div>
 </section>
 </body>

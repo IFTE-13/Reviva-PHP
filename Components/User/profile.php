@@ -1,11 +1,11 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Controller/userController.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/PCFixer/Controller/userController.php");
 
     if (empty($_SESSION['role'])) {
-        header("Location: http://localhost/fixit/View/login.php");
+        header("Location: http://localhost/PCFixer/View/login.php");
         exit();
     } elseif ($_SESSION['role'] !== 'customer') {
-        header("Location: http://localhost/fixit/View/notfound.php");
+        header("Location: http://localhost/PCFixer/View/notfound.php");
         exit();
     }
 
@@ -25,7 +25,7 @@
                     <div class="w-full px-8 py-4 bg-gray-100 rounded-lg shadow-md">
                     <div class="flex items-center justify-between mb-10">
                         <span class="text-sm  font-semibold text-gray-700"><?php echo $today; ?></span>
-                        <a href="http://localhost/fixit/View/User/settings.php" class="px-3 py-1 text-sm text-white font-bold transition-colors duration-300 transform border bg-gray-800 rounded cursor-pointer hover:bg-gray-600" tabindex="0" role="button">Edit Profile</a>
+                        <a href="http://localhost/PCFixer/View/User/settings.php" class="px-3 py-1 text-sm text-white font-bold transition-colors duration-300 transform border bg-gray-800 rounded cursor-pointer hover:bg-gray-600" tabindex="0" role="button">Edit Profile</a>
                     </div>
                         <div class="mt-2 flex flex-col">
                         <p class="text-gray-700 mb-4" tabindex="0" role="link">UserID: <?php echo $_SESSION['id']; ?></p>
@@ -54,7 +54,7 @@
                                 }
                             } 
                             ?>
-                            <a href="http://localhost/fixit/View/User/services.php" class="p-4 border rounded-lg cursor-pointer flex items-center justify-center shadow-md">
+                            <a href="http://localhost/PCFixer/View/User/services.php" class="p-4 border rounded-lg cursor-pointer flex items-center justify-center shadow-md">
                                     <div class="flex-grow pl-6 ">
                                         <h2 class="text-gray-700 text-lg text-center title-font font-medium mb-2">View ALL</h2>
                                     </div>

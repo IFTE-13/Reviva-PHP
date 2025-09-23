@@ -1,5 +1,5 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Model/userModel.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/PCFixer/Model/userModel.php");
 
     $registrationError = "";
 
@@ -15,7 +15,7 @@
         }
 
         if($results==TRUE){
-        header("Location: http://localhost/fixit/View/login.php");
+        header("Location: http://localhost/PCFixer/View/login.php");
         }
         else{
             $registrationError = "registration failed";

@@ -1,3 +1,3 @@
 <?php
-    header('location: http://localhost/fixit/View/Rider/pickup.php');
+    header('location: http://localhost/PCFixer/View/Rider/pickup.php');
 ?>

@@ -20,7 +20,7 @@
           style="
             background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
           ">
-          <a href="http://localhost/fixit/View/login.php">Request</a>
+          <a href="http://localhost/PCFixer/View/login.php">Request</a>
         </button>
       </div>
     </div>

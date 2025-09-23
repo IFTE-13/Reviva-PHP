@@ -1,11 +1,11 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Controller/adminController.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/PCFixer/Controller/adminController.php");
 
     if (empty($_SESSION['role'])) {
-        header("Location: http://localhost/fixit/View/login.php");
+        header("Location: http://localhost/PCFixer/View/login.php");
         exit();
     } elseif ($_SESSION['role'] !== 'admin') {
-        header("Location: http://localhost/fixit/View/notfound.php");
+        header("Location: http://localhost/PCFixer/View/notfound.php");
         exit();
     }
 ?>

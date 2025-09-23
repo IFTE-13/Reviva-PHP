@@ -1,5 +1,5 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Controller/feedbackController.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/PCFixer/Controller/feedbackController.php");
 ?>
 
 <!DOCTYPE html>

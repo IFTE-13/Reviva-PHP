@@ -1,5 +1,5 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] . "/fixit/Model/userModel.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/PCFixer/Model/userModel.php");
 
     session_start();
 
@@ -31,16 +31,16 @@
                 }
                 switch ($_SESSION['role']) {
                     case 'customer':
-                        header("Location: http://localhost/fixit/View/User/index.php");
+                        header("Location: http://localhost/PCFixer/View/User/index.php");
                         break;
                     case 'admin':
-                        header("Location: http://localhost/fixit/View/Admin/user.php");
+                        header("Location: http://localhost/PCFixer/View/Admin/user.php");
                         break;
                     case 'worker':
-                        header("Location: http://localhost/fixit/View/Worker/index.php");
+                        header("Location: http://localhost/PCFixer/View/Worker/index.php");
                         break;
                     case 'rider':
-                        header("Location: http://localhost/fixit/View/Rider/index.php");
+                        header("Location: http://localhost/PCFixer/View/Rider/index.php");
                         break;
                     default:
                         // handle unexpected role

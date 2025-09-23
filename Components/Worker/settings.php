@@ -1,7 +1,7 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Controller/userController.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/PCFixer/Controller/userController.php");
     if(empty($_SESSION['role'])){
-        header("Location: http://localhost/fixit/View/login.php");
+        header("Location: http://localhost/PCFixer/View/login.php");
     }
 ?>
 

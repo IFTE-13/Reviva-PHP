@@ -3,6 +3,6 @@
     echo "hello";
     if(session_destroy())   
         {
-            header("Location: http://localhost/fixit/index.php");
+            header("Location: http://localhost/PCFixer/index.php");
         }
 ?>

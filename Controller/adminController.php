@@ -1,5 +1,5 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Model/adminModel.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/PCFixer/Model/adminModel.php");
 
     session_start();
 

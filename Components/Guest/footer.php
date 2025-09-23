@@ -10,7 +10,7 @@
         <div>
             <h4 class="text-gray-800 font-semibold sm:pb-2">Resources</h4>
             <ul class="space-y-4">
-                <li><a href="http://localhost/fixit/View/contact.php" class="hover:text-orange-500 duration-150">Contact</a></li>
+                <li><a href="http://localhost/PCFixer/View/contact.php" class="hover:text-orange-500 duration-150">Contact</a></li>
                 <li><a href="javascript:void()" class="hover:text-orange-500 duration-150">Support</a></li>
                 <li><a href="javascript:void()" class="hover:text-orange-500 duration-150">Documentation</a></li>
                 <li><a href="javascript:void()" class="hover:text-orange-500 duration-150">Pricing</a></li>

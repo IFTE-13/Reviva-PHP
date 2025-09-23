@@ -1,5 +1,5 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] ."/fixit/Controller/riderController.php");
+    include($_SERVER['DOCUMENT_ROOT'] ."/PCFixer/Controller/riderController.php");
     
     function getWeightClass($weight) {
         if ($weight === 'light') {

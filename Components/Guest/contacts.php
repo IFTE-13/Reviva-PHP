@@ -6,7 +6,7 @@
     <title>Simplified Form</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="text-gray-600">
+<body class="bg-[#FF9505]">
     <main class="flex overflow-hidden container mx-auto">
         <div class="flex-1 hidden lg:block">
             <img src="../Assets/contact.jpg" class="w-full object-cover" />
