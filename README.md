@@ -1,4 +1,4 @@
-# Reviva - PC Parts Repair Platform
+# Reviva
 
 ## Overview
 Reviva is an innovative web platform designed to provide comprehensive PC parts repair services, addressing the growing need for reliable and accessible technical support in the digital age. The platform streamlines the repair process, integrates advanced diagnostic tools, and promotes user empowerment through educational resources. By prioritizing transparency, customer satisfaction, and sustainability, Reviva aims to revolutionize the PC repair industry.
@@ -47,7 +47,7 @@ To set up the Reviva platform locally, follow these steps:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/username/Reviva.git
+   git clone https://github.com/IFTE-13/Reviva-PHP.git
    ```
 3. **Install Dependencies**:
 - Ensure Node.js is installed: `npm install`
