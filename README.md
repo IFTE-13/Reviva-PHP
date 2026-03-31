@@ -1,6 +1,4 @@
 # Reviva
-
-## Overview
 Reviva is an innovative web platform designed to provide comprehensive PC parts repair services, addressing the growing need for reliable and accessible technical support in the digital age. The platform streamlines the repair process, integrates advanced diagnostic tools, and promotes user empowerment through educational resources. By prioritizing transparency, customer satisfaction, and sustainability, Reviva aims to revolutionize the PC repair industry.
 
 ## Features
@@ -50,16 +48,16 @@ To set up the Reviva platform locally, follow these steps:
    git clone https://github.com/IFTE-13/Reviva-PHP.git
    ```
 3. **Install Dependencies**:
-- Ensure Node.js is installed: `npm install`
-- Set up XAMPP for the PHP backend and MySQL database.
+    - Ensure Node.js is installed: `npm install`
+    - Set up XAMPP for the PHP backend and MySQL database.
 
 3. **Configure the Database**:
-- Import the provided SQL schema for tables: `Feedback`, `Product/Service Request`, `Service`, `Transaction`, and `User`.
-- Update database credentials in the configuration file (e.g., `config.php`).
+    - Import the provided SQL schema for tables: `Feedback`, `Product/Service Request`, `Service`, `Transaction`, and `User`.
+    - Update database credentials in the configuration file (e.g., `config.php`).
 
 4. **Run the Application**:
-- Start the XAMPP Apache and MySQL servers.
-- Open the project in Visual Studio Code and run it via a local server (e.g., `http://localhost/Reviva`).
+    - Start the XAMPP Apache and MySQL servers.
+    - Open the project in Visual Studio Code, rename the project folder to Reviva from Reviva-PHP-master and run it via a local server (e.g., `http://localhost/Reviva`).
 
 ## Usage
 - **Admin**: Manage workers, managers, riders, and service requests.
@@ -76,10 +74,6 @@ The platform uses the following tables:
 - **Transaction**: Records payment and service transactions.
 - **User**: Manages user profiles and roles (Admin, Customer, Manager, Worker, Rider).
 
-## Diagrams
-- **ER Diagram**: Visualizes relationships between database tables.
-- **Data Flow Chart**: Illustrates the flow of data through the system.
-
 ## Future Work
 - **Mobile Application**: Develop a mobile app for on-the-go access.
 - **Advanced Analytics**: Implement predictive maintenance and user behavior analysis.
@@ -87,15 +81,20 @@ The platform uses the following tables:
 - **Expanded Services**: Include software troubleshooting and niche market support.
 
 ## References
-- [Web Technology for Developers](https://developer.mozilla.org/en-US/docs/Web)
-- [Shadcn/Ui](https://ui.shadcn.com/)
-- [GitHub](https://github.com/)
-- [JavaScript — MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [W3Schools](https://www.w3schools.com/)
-- [Open AI](https://chat.openai.com/)
+> [!NOTE]
+> - [Web Technology for Developers](https://developer.mozilla.org/en-US/docs/Web)
+> - [Shadcn/Ui](https://ui.shadcn.com/)
+> - [GitHub](https://github.com/)
+> - [JavaScript — MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+> - [W3Schools](https://www.w3schools.com/)
+> - [Open AI](https://chat.openai.com/)
 
-## Contributing
-Contributions are welcome! Please fork the repository, create a new branch, and submit a pull request with your changes. Ensure your code follows the project’s coding standards and includes appropriate documentation.
+## Contribution 
+> [!WARNING]
+> **Do not contribute to this project. It is deprecated.**
+</br>If you wish to follow or use it, be sure to follow the current procedure.
+Forking is still available if you wish to use it.
 
 ## License
+> [!CAUTION]
 This project is licensed under the MIT License. See the `LICENSE` file for details.
